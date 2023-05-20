@@ -1,0 +1,68 @@
+
+/* @use "themes/theme_a" as *; */
+@use "themes/theme_b" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-family: $font-base-family;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    height: 100vh;
+
+    .boxes {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 15px;
+        height: 120px;
+        width: 150px;
+        border: 2px solid #bdbdbd;
+        border-radius: $default-border-radius;
+
+        &.base-box {
+            background-color: $base-color;
+        }
+
+        &.important-box {
+            background-color: $important-color;
+        }
+
+        &.warning-box {
+            background-color: $warning-color;
+        }
+
+        &.shadow-box {
+            box-shadow: $default-box-shadow;
+        }
+    }
+
+    .transparent-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background-color: transparent;
+        height: 110px;
+        width: 150px;
+        padding: 8px;
+
+        .secondary-font {
+            font-family: $font-secondary-family;
+        }
+    }
+    
+}
+
